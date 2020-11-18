@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    p Welcome to category section.
+
+    a(href="/") return to overview
+
+    dl
+        each order in orders_list
+            dt
+                a(href=order.url) #{order.id}
+            dd
+                p #{order.item}

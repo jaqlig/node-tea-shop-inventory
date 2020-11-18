@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+
+  p Products amount: #{data.item_count}
+  p Orders amount: #{data.order_count}
+  p Items:
+  div
+    p
+      a(href="/category/tea") Tea
+    p
+      a(href="/category/coffee") Coffee
+    p
+      a(href="/category/yerba") Yerba Mate
+    p
+      a(href="/category/accessories") Accessories for drinking
+  div
+      a(href="/create") Create new item
+
+
+  p Ordes:
+  div
+    p
+      a(href="/orders") Display all orders
+
+  div
+    a(href="/orders/create") Create new order

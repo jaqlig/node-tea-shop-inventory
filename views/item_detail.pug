@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div
+    p Item name: #{item.name}
+    p Description: #{item.description}
+    p Price: #{item.price}€
+    p Items left: #{item.quantity}
+
+  div
+    a(href=item.url+'/update') Update this item
+    a(href=item.url+'/delete') Delete this item

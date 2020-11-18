@@ -1,0 +1,48 @@
+TEA STORE INVENTORY
+tea, coffee, yerba, accessories
+
+
+[MODELS]
+category{name} //tea, coffee, yerba, accessories
+item{name, description, category, price, quantity, when available}
+
+suggested accessories are shown depending on category
+
+[VIEWS]
+overview for brief info on pending orders, last edits and stats
+all products in category view
+one item view
+add new item form
+update item form
+delete item form
+add item to order form
+all orders view
+
+[CONTROLLERS]
+--for item
+	details page for one item
+	
+	display create form on GET
+	handle create form on POST
+	
+	display update form on GET
+	handle update form on POST
+	
+	display delete form on GET
+	handle delet form on POST
+	
+	display all orders list 
+	display order details
+	
+	display order form on GET
+	handle order form on POST //adds to pending orders and substracts quantity from db
+	
+	display order process on GET
+	handle order process on POST //removes from pending orders and adds to history
+	
+	display order revert on GET
+	handle order revert on POST //removes from pending and restores quantity in db
+	
+--for category
+	stats for overview
+	display list of all items in category
